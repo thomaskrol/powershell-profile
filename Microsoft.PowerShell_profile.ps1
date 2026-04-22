@@ -539,7 +539,11 @@ function gb { git branch "$args" }
 
 function gbr { git branch -r "$args" }
 
+function gbd { git branch -d "$args" }
+
 function gco { git checkout "$args" }
+
+function gcob { git checkout -b "$args" }
 
 function glog { git log --oneline --graph --all }
 
@@ -754,7 +758,9 @@ $($PSStyle.Foreground.Green)gd$($PSStyle.Reset) [files]                         
                                                                                                 files or all files
 $($PSStyle.Foreground.Green)gb$($PSStyle.Reset) [name]                              $($PSStyle.Foreground.Yellow)git branch$($PSStyle.Reset) [name]                                      $($PSStyle.Foreground.BrightBlue)List or create branch
 $($PSStyle.Foreground.Green)gbr$($PSStyle.Reset) [name]                             $($PSStyle.Foreground.Yellow)git branch -r$($PSStyle.Reset) [name]                                   $($PSStyle.Foreground.BrightBlue)List remote branches
+$($PSStyle.Foreground.Green)gbd$($PSStyle.Reset) <name>                             $($PSStyle.Foreground.Yellow)git branch -d$($PSStyle.Reset) <name>                                   $($PSStyle.Foreground.BrightBlue)Delete branch
 $($PSStyle.Foreground.Green)gco$($PSStyle.Reset) <branch>                           $($PSStyle.Foreground.Yellow)git checkout$($PSStyle.Reset) <branch>                                  $($PSStyle.Foreground.BrightBlue)Switch branch
+$($PSStyle.Foreground.Green)gcob$($PSStyle.Reset) <branch>                          $($PSStyle.Foreground.Yellow)git checkout -b$($PSStyle.Reset) <branch>                               $($PSStyle.Foreground.BrightBlue)Switch to new branch
 $($PSStyle.Foreground.Green)glog                                   $($PSStyle.Foreground.Yellow)git log --oneline --graph                              $($PSStyle.Foreground.BrightBlue)Pretty log graph
 $($PSStyle.Foreground.Green)gpsh                                   $($PSStyle.Foreground.Yellow)git push                                               $($PSStyle.Foreground.BrightBlue)Push changes
 $($PSStyle.Foreground.Green)gpll                                   $($PSStyle.Foreground.Yellow)git pull                                               $($PSStyle.Foreground.BrightBlue)Pull changes
